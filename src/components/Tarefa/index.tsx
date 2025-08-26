@@ -5,12 +5,11 @@ const Tarefa = () => (
     <S.Titulo>Nome da Tarefa</S.Titulo>
     <S.Tag>Importante</S.Tag>
     <S.Tag>Pendente</S.Tag>
-    <S.Descricao>
-      <S.BarraAcoes>
-        <S.Botao>Editar</S.Botao>
-        <S.Botao>Remover</S.Botao>
-      </S.BarraAcoes>
-    </S.Descricao>
+    <S.Descricao />
+    <S.BarraAcoes>
+      <S.Botao>Editar</S.Botao>
+      <S.Botao>Remover</S.Botao>
+    </S.BarraAcoes>
   </S.Card>
 )
 
