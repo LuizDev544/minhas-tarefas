@@ -1,6 +1,27 @@
 import Tarefa from '../../components/Tarefa'
 import { Container } from './styles'
 
+const tarefas = [
+  {
+    titulo: 'Estudar TypeScript',
+    descricao: 'Ver a aula 3 da EBAC',
+    prioridade: 'importante',
+    status: 'pendente'
+  },
+  {
+    titulo: 'Pagar conta',
+    descricao: 'Baixar Fatura do Gmil',
+    prioridade: 'urgente',
+    status: 'pendente'
+  },
+  {
+    titulo: 'Ir para a academia',
+    descricao: 'Fazer treino B',
+    prioridade: 'importante',
+    status: 'pendente'
+  }
+]
+
 const ListaDeTarefas = () => {
   return (
     <main>
@@ -8,16 +29,16 @@ const ListaDeTarefas = () => {
         <p>Funciona hehehe</p>
         <ul>
           <li>
-            <Tarefa />
-          </li>
-          <li>
-            <Tarefa />
-          </li>
-          <li>
-            <Tarefa />
-          </li>
-          <li>
-            <Tarefa />
+            {tarefas.map((t) => (
+              <li key={t.titulo}>
+                <Tarefa
+                  descricao={t.descricao}
+                  titulo={t.titulo}
+                  status={t.status}
+                  prioridade={t.prioridade}
+                />
+              </li>
+            ))}
           </li>
         </ul>
       </Container>
