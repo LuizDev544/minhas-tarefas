@@ -7,9 +7,14 @@ const ListaDeTarefas = () => {
   const { itens } = useSelector((state: RootReducer) => state.tarefas)
   const { termo } = useSelector((state: RootReducer) => state.filtro)
   const filtraTarefas = () => {
-    return itens.filter(
-      (item) => item.titulo.toLowerCase().search(termo.toLocaleLowerCase()) >= 0
-    )
+    if (termo) {
+      return itens.filter(
+        (item) =>
+          item.titulo.toLowerCase().search(termo.toLocaleLowerCase()) >= 0
+      )
+    } else {
+      return itens
+    }
   }
   return (
     <main>
